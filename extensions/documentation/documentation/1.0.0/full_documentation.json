@@ -2,24 +2,29 @@
   "openapi": "3.0.0",
   "info": {
     "version": "1.0.0",
-    "title": "DOCUMENTATION",
+    "title": "BIG-CMS",
     "description": "",
     "termsOfService": "YOUR_TERMS_OF_SERVICE_URL",
     "contact": {
-      "name": "TEAM",
-      "email": "contact-email@something.io",
-      "url": "mywebsite.io"
+      "name": "BIG",
+      "email": "RocketTechBIG@quickenloans.com",
+      "url": "https://big.rockfin.com/"
     },
     "license": {
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "09/27/2020 1:00:21 PM"
+    "x-generation-date": "09/27/2020 3:22:29 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
     "showGeneratedFiles": true,
-    "generateDefaultResponse": true
+    "generateDefaultResponse": true,
+    "pluginsForWhichToGenerateDoc": [
+      "email",
+      "upload",
+      "users-permissions"
+    ]
   },
   "servers": [
     {
@@ -37,11 +42,11 @@
   ],
   "externalDocs": {
     "description": "Find out more",
-    "url": "https://strapi.io/documentation/v3.x/"
+    "url": "https://strapi.io/documentation/"
   },
   "security": [
     {
-      "bearerAuth": ["eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjAxMjI2MDMyLCJleHAiOjE2MDM4MTgwMzJ9.SfVnLl75UC1T1bKly_bjcoFQRtiOgpF6zjSWfNP2i0g"]
+      "bearerAuth": []
     }
   ],
   "paths": {
