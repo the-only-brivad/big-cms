@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_type_data_products",
+  "info": {
+    "name": "Data Product",
+    "icon": "signal"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Marketing_Copy": {
+      "type": "richtext",
+      "required": true
+    },
+    "API_Endpoint": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

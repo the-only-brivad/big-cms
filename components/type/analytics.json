@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_type_analytics",
+  "info": {
+    "name": "Analytics",
+    "icon": "file-alt"
+  },
+  "options": {},
+  "attributes": {
+    "Analytics_Content": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
