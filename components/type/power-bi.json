@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_report_power_bis",
+  "info": {
+    "name": "Power BI",
+    "icon": "code"
+  },
+  "options": {},
+  "attributes": {
+    "PowerBI_JSON": {
+      "type": "json"
+    }
+  }
+}

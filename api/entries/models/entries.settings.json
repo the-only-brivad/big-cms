@@ -18,10 +18,6 @@
       "targetField": "Title",
       "required": true
     },
-    "Content": {
-      "type": "richtext",
-      "required": true
-    },
     "Screenshot": {
       "model": "file",
       "via": "related",
@@ -34,15 +30,19 @@
     "Reviewed_Last": {
       "type": "date"
     },
-    "permissions": {
-      "plugin": "users-permissions",
-      "collection": "permission"
-    },
     "Tags": {
       "type": "component",
       "repeatable": true,
       "component": "tags.tags",
       "required": true
+    },
+    "Entry_Specific_Component": {
+      "type": "dynamiczone",
+      "components": [
+        "type.analytics",
+        "type.power-bi",
+        "type.data-product"
+      ]
     }
   }
 }

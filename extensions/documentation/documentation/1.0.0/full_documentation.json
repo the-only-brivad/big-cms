@@ -2,28 +2,33 @@
   "openapi": "3.0.0",
   "info": {
     "version": "1.0.0",
-    "title": "DOCUMENTATION",
+    "title": "BIG-CMS",
     "description": "",
     "termsOfService": "YOUR_TERMS_OF_SERVICE_URL",
     "contact": {
-      "name": "TEAM",
-      "email": "contact-email@something.io",
-      "url": "mywebsite.io"
+      "name": "BIG",
+      "email": "RocketTechBIG@quickenloans.com",
+      "url": "https://big.rockfin.com/"
     },
     "license": {
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "09/26/2020 9:32:11 PM"
+    "x-generation-date": "09/28/2020 2:10:18 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
     "showGeneratedFiles": true,
-    "generateDefaultResponse": true
+    "generateDefaultResponse": true,
+    "pluginsForWhichToGenerateDoc": [
+      "email",
+      "upload",
+      "users-permissions"
+    ]
   },
   "servers": [
     {
-      "url": "http://localhost:1337",
+      "url": "http://localhost:9000",
       "description": "Development server"
     },
     {
@@ -37,7 +42,7 @@
   ],
   "externalDocs": {
     "description": "Find out more",
-    "url": "https://strapi.io/documentation/v3.x/"
+    "url": "https://strapi.io/documentation/"
   },
   "security": [
     {
@@ -2661,7 +2666,6 @@
         "required": [
           "id",
           "Shorty",
-          "Content",
           "Tags"
         ],
         "properties": {
@@ -2673,9 +2677,6 @@
           },
           "Shorty": {
             "type": "uid"
-          },
-          "Content": {
-            "type": "string"
           },
           "Screenshot": {
             "required": [
@@ -2747,44 +2748,6 @@
           "Reviewed_Last": {
             "type": "string"
           },
-          "permissions": {
-            "required": [
-              "id",
-              "type",
-              "controller",
-              "action",
-              "enabled"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "type": {
-                "type": "string"
-              },
-              "controller": {
-                "type": "string"
-              },
-              "action": {
-                "type": "string"
-              },
-              "enabled": {
-                "type": "boolean"
-              },
-              "policy": {
-                "type": "string"
-              },
-              "role": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "Tags": {
             "type": "array",
             "items": {
@@ -2801,6 +2764,86 @@
                   "type": "string"
                 }
               }
+            }
+          },
+          "Entry_Specific_Component": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "type.analytics",
+                        "type.power-bi",
+                        "type.data-product"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "Analytics_Content": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "Analytics_Content"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "type.analytics",
+                        "type.power-bi",
+                        "type.data-product"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "PowerBI_JSON": {
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "type.analytics",
+                        "type.power-bi",
+                        "type.data-product"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "Name": {
+                      "type": "string"
+                    },
+                    "Marketing_Copy": {
+                      "type": "string"
+                    },
+                    "API_Endpoint": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "Name",
+                    "Marketing_Copy",
+                    "API_Endpoint"
+                  ]
+                }
+              ]
             }
           },
           "created_by": {
@@ -2896,7 +2939,6 @@
       "NewEntries": {
         "required": [
           "Shorty",
-          "Content",
           "Tags"
         ],
         "properties": {
@@ -2906,13 +2948,7 @@
           "Shorty": {
             "type": "uid"
           },
-          "Content": {
-            "type": "string"
-          },
           "Reviewed_Last": {
-            "type": "string"
-          },
-          "permissions": {
             "type": "string"
           },
           "Tags": {
@@ -2931,6 +2967,86 @@
                   "type": "string"
                 }
               }
+            }
+          },
+          "Entry_Specific_Component": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "type.analytics",
+                        "type.power-bi",
+                        "type.data-product"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "Analytics_Content": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "Analytics_Content"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "type.analytics",
+                        "type.power-bi",
+                        "type.data-product"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "PowerBI_JSON": {
+                      "type": "object"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                },
+                {
+                  "properties": {
+                    "__component": {
+                      "type": "string",
+                      "enum": [
+                        "type.analytics",
+                        "type.power-bi",
+                        "type.data-product"
+                      ]
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "Name": {
+                      "type": "string"
+                    },
+                    "Marketing_Copy": {
+                      "type": "string"
+                    },
+                    "API_Endpoint": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "Name",
+                    "Marketing_Copy",
+                    "API_Endpoint"
+                  ]
+                }
+              ]
             }
           },
           "created_by": {

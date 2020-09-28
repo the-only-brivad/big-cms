@@ -4,18 +4,21 @@
   "version": "0.1.0",
   "description": "A Strapi application",
   "scripts": {
-    "develop": "strapi develop",
+    "develop": "cross-env NODE_ENV='development' strapi develop",
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi"
   },
   "devDependencies": {},
   "dependencies": {
+    "cross-env": "^7.0.2",
     "knex": "<0.20.0",
+    "sharp": "^0.26.1",
     "sqlite3": "latest",
     "strapi": "3.1.6",
     "strapi-admin": "3.1.6",
     "strapi-connector-bookshelf": "3.1.6",
+    "strapi-connector-mongoose": "^3.1.6",
     "strapi-plugin-content-manager": "3.1.6",
     "strapi-plugin-content-type-builder": "3.1.6",
     "strapi-plugin-documentation": "3.1.6",
