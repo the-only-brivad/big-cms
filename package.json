@@ -64,5 +64,6 @@
     "webpack-merge": "^5.8.0",
     "webpack-node-externals": "^3.0.0",
     "webpack-sources": "^3.0.2"
-  }
+  },
+  "packageManager": "yarn@3.0.2"
 }
