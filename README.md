@@ -1,4 +1,8 @@
+# Prereqs
 
+- allow node js through firewall
+- update hosts file for 127.0.0.1 localhost
+- start api then start site
 
 # Nx12BaseReactTypescript
 
